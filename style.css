@@ -406,6 +406,10 @@ section {
     display: none;
   }
 
+  header h1 {
+    font-size: 300%;
+  }
+
   .open_close {
     visibility: visible;
   }
