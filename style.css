@@ -26,6 +26,7 @@ body {
   -moz-box-shadow: 4px 15px 13px 10px rgba(34, 60, 80, 0.2);
   box-shadow: 4px 15px 13px 10px rgba(34, 60, 80, 0.2);
   transition: 0.5s;
+  z-index: 2;
 }
 
 .nav-item {
@@ -123,7 +124,8 @@ header {
   background-size: cover;
   background-position: bottom center;
   padding: 150px 0;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
+  height: 100vh;
 }
 
 header h1 {
@@ -207,18 +209,115 @@ section {
   z-index: 5;
 } */
 
+/* skills */
+
+.skills {
+  padding: 1% 0;
+  margin: 1rem auto;
+}
+
+.html {
+  width: 100%;
+  height: 5px;
+  background-color: #01488d;
+  border-radius: 3px;
+  position: relative;
+  margin-bottom: 50px;
+  z-index: 1;
+  transition: height 0.5s;
+  text-align: center;
+}
+
+.html span,
+.css span,
+.javaScript span {
+  color: #fff;
+}
+
+.html::after {
+  content: 'HTML';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.html:hover {
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.css {
+  width: 90%;
+  height: 5px;
+  background-color: tomato;
+  border-radius: 3px;
+  position: relative;
+  transition: height 0.5s;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.css::after {
+  content: 'CSS';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.css:hover {
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.javaScript {
+  width: 80%;
+  height: 5px;
+  background-color: #efd81d;
+  border-radius: 3px;
+  position: relative;
+  transition: height 0.5s;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.javaScript::after {
+  content: 'JavaScirpt';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.javaScript:hover {
+  height: 45px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* works */
 
 .works-item {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 20px 0;
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .works .myImg img {
-  width: 50%;
   border-radius: 50%;
+  width: 70%;
 }
 
 .works .myImg {
@@ -230,7 +329,22 @@ section {
 }
 
 .works-text h3 {
-  font-size: 200%;
+  font-size: 2rem;
+}
+
+.repos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.repos p {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .gitBtn {
@@ -244,15 +358,30 @@ section {
   border: none;
   color: #fff;
   font-family: 'Varela Round', sans-serif;
+  margin-top: 10px;
 }
 
-@media (min-width: 601px) {
+@media (max-width: 768px) {
+  .works-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .repos p {
+    font-size: 1rem;
+  }
+
+  .works-text h3 {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 501px) {
   .nav2 {
     transform: translateX(-100%);
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .nav1 {
     display: none;
   }
