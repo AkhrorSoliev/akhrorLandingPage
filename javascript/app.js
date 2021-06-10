@@ -43,7 +43,7 @@ var typed = new Typed('.typing', {
   strings: ['Web', 'ReactJs', 'JavaScript', 'HTML', 'CSS'],
   smartBackspace: true, // Default value
   typeSpeed: 200,
-  loop: false,
+  loop: true,
   backSpeed: 100,
   startDelay: 3000,
   backDelay: 1000,
